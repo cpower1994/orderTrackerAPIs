@@ -13,7 +13,6 @@ exports.create = (req, res) => {
         order_placed_date: req.body.order_placed_date,
         deliver_by: req.body.deliver_by,
         items: req.body.items,
-        total_price: req.body.total_price
     })
 
     order.save()

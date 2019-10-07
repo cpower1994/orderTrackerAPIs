@@ -6,7 +6,6 @@ const OrderSchema = mongoose.Schema({
     order_placed_date: Date,
     deliver_by: Date,
     items: Array,
-    total_price: Number
 }, {
     timestamps: true
 });
