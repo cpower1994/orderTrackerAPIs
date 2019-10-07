@@ -10,14 +10,14 @@ exports.create = (req, res) => {
     const order = new Order({
         customer_first_name: req.body.customer_first_name,
         customer_last_name: req.body.customer_last_name,
-        order_placed_date: req.body.order_placed_date,
         deliver_by: req.body.deliver_by,
         items: req.body.items,
-    })
+    });
 
     order.save()
         .then(data => {
             res.send(data);
+            console.log("sent");
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while making the order."
